@@ -19,11 +19,13 @@ function playSound(sound){
         audioElement.currentTime = 0;
         audioElement.play();
     }
+    
+      if(KeyElement) {
+          KeyElement.classList.add('active');
+          document.querySelector(`div[data-key="${sound}"]`).style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
-    if(KeyElement) {
-        KeyElement.classList.add('active');
 
-        setTimeout(()=>{
+        setTimeout(()=>{zxc
             KeyElement.classList.remove('active');
         }, 300);
     }
