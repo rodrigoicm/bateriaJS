@@ -22,11 +22,12 @@ function playSound(sound){
     
       if(KeyElement) {
           KeyElement.classList.add('active');
-          document.querySelector(`div[data-key="${sound}"]`).style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+          KeyElement.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
 
-        setTimeout(()=>{zxc
+        setTimeout(()=>{
             KeyElement.classList.remove('active');
+            KeyElement.style.backgroundColor = '#333';
         }, 300);
     }
 
